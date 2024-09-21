@@ -7,11 +7,6 @@ router = APIRouter(
     tags=["event"],
 )
 
-
-@router.get("/")
-async def read_items():
-    return [{"item_id": "Foo"}]
-
 @router.get("/thumbnail", response_model=list[Event])
 def get_thumbnail(amount: int, laboratory_id: int | None = None, research_id: int | None = None):
     if amount < 0:
@@ -26,3 +21,4 @@ def get_thumbnail(amount: int, laboratory_id: int | None = None, research_id: in
         filtered_events = [event for event in filtered_events if event["research_id"] == research_id]
 
     return filtered_events[:amount]
+

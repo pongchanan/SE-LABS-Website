@@ -7,11 +7,6 @@ from ....fake_db.event import fake_db_event
 
 client = TestClient(router)
 
-def test_init():
-    response = client.get("/user/event/")
-    assert response.status_code == 200
-    assert response.json() == [{"item_id": "Foo"}]
-
 def test_get_thumbnail():
     response = client.get("/user/event/thumbnail?amount=5")
     assert response.status_code == 200
