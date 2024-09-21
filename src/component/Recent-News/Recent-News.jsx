@@ -1,9 +1,9 @@
 import React from "react";
-import NewsCard from "./NewsCard";
+import NewsCard from "./News-Card";
 
 const newsItems = [
   {
-    image: "https://picsum.photos/200/300",
+    image: "https://picsum.photos/300/200",
 
     title: "Blog title heading will go here",
     content:

@@ -17,7 +17,7 @@ const NewsCard = ({ image, title, content, author, date }) => {
         <div className="flex gap-4 items-center mt-6 w-full text-sm">
           <img
             loading="lazy"
-            src="https://picsum.photos/200/300"
+            src="https://picsum.photos/300/200"
             alt={`${author} avatar`}
             className="object-contain shrink-0 self-stretch my-auto w-12 rounded-3xl aspect-square"
           />
