@@ -11,6 +11,33 @@ const newsItems = [
     author: "AI Laboratory",
     date: "11 Jan 2022",
   },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
   // Repeat the above object 3 more times for the other news items
 ];
 

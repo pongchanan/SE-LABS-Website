@@ -21,20 +21,30 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 User:
-[About]
+About
+
 latest news - get >> user/news/thumbnail?amount=3
 latest events - get >> user/event/thumbnail?amount=3
-[Landing]
+
+Landing
 latest news - get >> user/news/thumbnail?amount=3
 latest events - get >> user/event/thumbnail?amount=3
-[News]
+
+News
 latest news - get >> user/news/thumbnail?amount=9
 
-[Publications]
-[Research]
-[Labs]
-[Events]
+Publications
+
+Research
+
+Labs
+
+Events
 
 -[lab-> lab events] -[lab -> labs research] -[lab -> lab news] -[lab -> lab publications] -[lab -> lab team/people] -[research -> research news] -[research -> lab events] -[News -> related news]
 
-- Admin/Researchers -[login] -[Landing] -[Preview]
+- Admin/Researchers -login -Landing -Preview
+
+TODO
+
+- w(<630) , will become button to show nav

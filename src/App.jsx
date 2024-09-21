@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import RootLayout from "./routes/user/root";
+import RootLayout from "./routes/root";
 import LandingPage from "./routes/user/Landing-Page";
 import AboutPage from "./routes/user/About-Page";
 import LeadResearcherPage from "./routes/admin/Lead-Researcher-page";

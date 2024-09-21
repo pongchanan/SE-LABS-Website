@@ -6,7 +6,6 @@ import RecentEvents from "../../component/Recent-Events/Recent-Events";
 function LandingPage() {
   return (
     <>
-      <h1>Landing page</h1>
       <HeroBox />
       <RecentNews />
       <RecentEvents />
