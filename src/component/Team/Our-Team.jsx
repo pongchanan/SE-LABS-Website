@@ -1,7 +1,7 @@
 import React from "react";
 import TeamCard from "./Team-Card";
-import previous from "../../resource/previous.svg";
-import next from "../../resource/next.svg";
+import previous from "../../resource/previous-button.svg";
+import next from "../../resource/next-button.svg";
 
 const teamMembers = [
   {

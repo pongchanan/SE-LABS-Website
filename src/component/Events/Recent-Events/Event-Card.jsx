@@ -1,6 +1,6 @@
 import React from "react";
-import locate from "../../resource/location.svg";
-import time from "../../resource/time.svg";
+import locate from "../../../resource/location.svg";
+import time from "../../../resource/time.svg";
 
 const EventCard = ({
   title,
