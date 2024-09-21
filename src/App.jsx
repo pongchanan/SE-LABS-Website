@@ -5,6 +5,7 @@ import AboutPage from "./routes/user/About-Page";
 import LeadResearcherPage from "./routes/admin/Lead-Researcher-page";
 import ResearcherPage from "./routes/admin/Researcher-Page";
 import AdminPage from "./routes/admin/Admin-Page";
+import DynamicLabPage from "./routes/user/Dynamic-Lab-Page";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "research" },
       { path: "events" },
       { path: "people" },
+      { path: "labs/:labID",element:<DynamicLabPage/> },
     ],
   },
   { path: "admin", element: <AdminPage /> },

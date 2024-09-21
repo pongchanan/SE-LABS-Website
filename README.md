@@ -23,12 +23,12 @@ Your app is ready to be deployed!
 User:
 About
 
-latest news - get >> user/news/thumbnail?amount=3
-latest events - get >> user/event/thumbnail?amount=3
+latest news - get >> user/news/thumbnail?amount=3 , - get >> user/news/image?news-id=123
+latest events - get >> user/event/thumbnail?amount=3, - get >> user/event/image?event-id=123
 
 Landing
-latest news - get >> user/news/thumbnail?amount=3
-latest events - get >> user/event/thumbnail?amount=3
+latest news - get >> user/news/thumbnail?amount=3 , - get >> user/news/image?news-id=123
+latest events - get >> user/event/thumbnail?amount=3, - get >> user/event/image?event-id=123
 
 News
 latest news - get >> user/news/thumbnail?amount=9
