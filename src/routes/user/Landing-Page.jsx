@@ -9,7 +9,7 @@ function LandingPage() {
     <>
       <HeroBox />
       <RecentNews newsItems={newsItems} />
-      <RecentEvents events={events} />
+      <RecentEvents eventItems={eventItems} />
     </>
   );
 }
@@ -55,7 +55,7 @@ const newsItems = [
   // Repeat the above object 3 more times for the other news items
 ];
 
-const events = [
+const eventItems = [
   {
     title: "Job Title",
     status: "ON GOING",

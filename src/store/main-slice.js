@@ -10,3 +10,7 @@ const mainSlice = createSlice({
   reducers: {},
 });
 export default mainSlice;
+
+//filter? bool (require filter in page or not)
+//isEditing
+//
