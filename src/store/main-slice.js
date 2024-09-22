@@ -3,6 +3,7 @@ const mainSlice = createSlice({
   name: "main",
   initialState: {
     items: [],
+    currentPath: null,
     admin: false,
     researcher: false,
     leadResearcher: false,
