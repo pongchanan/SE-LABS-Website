@@ -10,7 +10,7 @@ const TopicAndImage = () => {
         <div className="flex flex-col mt-20 w-full max-md:mt-10 max-md:max-w-full">
           <img
             loading="lazy"
-            src="https://picsum.photos/300/200"
+            src="https://picsum.photos/700/400"
             alt="AI Laboratory visual representation"
             className="object-contain w-full aspect-[2.19] max-md:max-w-full"
           />
