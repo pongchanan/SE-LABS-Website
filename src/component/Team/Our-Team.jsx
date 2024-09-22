@@ -1,32 +1,9 @@
 import React from "react";
-import TeamCard from "./Team-Card";
+import TeamCard from "../Cards/Team-Card";
 import previous from "../../resource/previous-button.svg";
 import next from "../../resource/next-button.svg";
 
-const teamMembers = [
-  {
-    name: "DR. Somchai Matmaitre",
-    email: "somchaimatmaitre@gmail.com",
-    image: "https://picsum.photos/300/200",
-  },
-  {
-    name: "Blog title heading will go here",
-    email: "gmail",
-    image: "https://picsum.photos/300/200",
-  },
-  {
-    name: "Blog title heading will go here",
-    email: "gmail",
-    image: "https://picsum.photos/300/200",
-  },
-  {
-    name: "Blog title heading will go here",
-    email: "gmail",
-    image: "https://picsum.photos/300/200",
-  },
-];
-
-const OurTeam = () => {
+const OurTeam = ({ teamMembers }) => {
   return (
     <section className="flex overflow-hidden flex-col px-16 py-28 w-full bg-sky-100 max-md:px-5 max-md:py-24 max-md:max-w-full">
       <div className="flex flex-wrap gap-10 justify-between items-end w-full max-md:max-w-full">

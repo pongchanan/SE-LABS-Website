@@ -1,37 +1,7 @@
 import React from "react";
-import EventCard from "./Event-Card";
+import EventCard from "../../Cards/Event-Card";
 
-const events = [
-  {
-    title: "Job Title",
-    status: "ON GOING",
-    statusClass: "bg-green-500",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    location: "Location",
-    duration: "Duration",
-  },
-  {
-    title: "Job Title",
-    status: "COMING",
-    statusClass: "bg-yellow-200",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    location: "Location",
-    duration: "Duration",
-  },
-  {
-    title: "Job Title",
-    status: "FINISHED",
-    statusClass: "bg-neutral-300",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    location: "Location",
-    duration: "Duration",
-  },
-];
-
-const RecentEvents = () => {
+const RecentEvents = ({ events }) => {
   return (
     <section className="flex overflow-hidden flex-col px-16 py-28 w-full bg-sky-100 max-md:px-5 max-md:py-24 max-md:max-w-full">
       <div className="flex flex-col w-full text-black max-md:max-w-full">
