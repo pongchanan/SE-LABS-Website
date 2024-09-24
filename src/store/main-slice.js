@@ -7,6 +7,7 @@ const mainSlice = createSlice({
     admin: false,
     researcher: false,
     leadResearcher: false,
+    itemQuantity:null,
   },
   reducers: {},
 });

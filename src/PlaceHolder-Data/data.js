@@ -65,7 +65,17 @@ export const newsItems = [
     image: "https://picsum.photos/300/200",
 
     title: "Blog title heading will go here",
-    content: "Lorem ipsum dolor sit amet, ",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
     author: "AI Laboratory",
     date: "11 Jan 2022",
   },
@@ -91,6 +101,42 @@ export const newsItems = [
     image: "https://picsum.photos/300/200",
 
     title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "Blog title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "title heading will go here",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    author: "AI Laboratory",
+    date: "11 Jan 2022",
+  },
+  {
+    image: "https://picsum.photos/300/200",
+
+    title: "title heading will go here",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
     author: "AI Laboratory",
@@ -165,5 +211,43 @@ export const eventItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
     location: "Location",
     duration: "Duration",
+  },
+];
+export const labData = [
+  {
+    title: "Blog title heading will go here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    lab: "AI Laboratory",
+  },
+  {
+    title: "Blog title heading will go here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    lab: "AI Laboratory",
+  },
+  {
+    title: "Blog title heading will go here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    lab: "AI Laboratory",
+  },
+  {
+    title: "Blog title heading will go here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    lab: "AI Laboratory",
+  },
+  {
+    title: "Blog title heading will go here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    lab: "AI Laboratory",
+  },
+  {
+    title: "Blog title heading will go here",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    lab: "AI Laboratory",
   },
 ];

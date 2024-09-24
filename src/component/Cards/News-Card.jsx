@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 const NewsCard = ({ image, title, content, author, date }) => {
   return (
-    <article className="flex flex-col rounded-3xl border border-black border-solid min-w-[240px] w-[390px]">
+    <article className="flex flex-col rounded-3xl border border-black border-solid min-w-[240px] w-[325px]">
       <img
         loading="lazy"
         src={image}

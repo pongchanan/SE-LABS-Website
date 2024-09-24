@@ -20,9 +20,9 @@ function DynamicLabPage() {
       <Description />
       <OurTeam teamMembers={teamMembers} />
       <RecentResearch researchItems={researchItems} />
-      <RecentNews newsItems={newsItems} />
+      <RecentNews rowData={newsItems} />
       <RecentPublications publicationItems={publicationItems} />
-      <RecentEvents eventItems={eventItems} />
+      <RecentEvents listData={eventItems} />
     </>
   );
 }

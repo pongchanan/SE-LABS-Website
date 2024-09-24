@@ -5,7 +5,10 @@ import RecentEvents from "../../component/Events/Recent-Events/Recent-Events";
 import { useLocation } from "react-router-dom";
 import AboutDescription from "../../component/Description/About-Description/About-Description";
 import TopicAndImage from "../../component/others/Big-Image/Topic-And-Image";
-import { eventItems, newsItems } from "../../PlaceHolder-Data/data";
+import { eventItems, labData, newsItems } from "../../PlaceHolder-Data/data";
+import TopicHeaderText from "../../component/Topic-Header";
+import GridCards from "../../component/Grid/Card-Grid";
+import DividingRows from "../../component/admin-Component/tables/proto1/table";
 function MainPages() {
   const location = useLocation();
   switch (location.pathname) {
@@ -13,8 +16,9 @@ function MainPages() {
       return (
         <>
           <HeroBox />
-          <RecentNews newsItems={newsItems} />
-          <RecentEvents eventItems={eventItems} />
+          <DividingRows />
+          <RecentNews rowData={newsItems} />
+          <RecentEvents listData={eventItems} />
         </>
       );
     case "/about":
@@ -22,18 +26,45 @@ function MainPages() {
         <>
           <TopicAndImage />
           <AboutDescription />
-          <RecentNews newsItems={newsItems} />
-          <RecentEvents eventItems={eventItems} />
+          <RecentNews rowData={newsItems} />
+          <RecentEvents listData={eventItems} />
         </>
       );
     case "/events":
-      return <></>;
+      return (
+        <>
+          <TopicHeaderText topic="Events" />
+          <GridCards rowData={newsItems} />
+        </>
+      );
     case "/news":
-      return <></>;
+      return (
+        <>
+          <TopicHeaderText topic="News" />
+          <GridCards rowData={newsItems} />
+        </>
+      );
     case "/publications":
-      return <></>;
+      return (
+        <>
+          <TopicHeaderText topic="Publications" />
+          <GridCards rowData={newsItems} />
+        </>
+      );
     case "/research":
-      return <></>;
+      return (
+        <>
+          <TopicHeaderText topic="Research" />
+          <GridCards rowData={newsItems} />
+        </>
+      );
+    case "/labs":
+      return (
+        <>
+          <TopicHeaderText topic="Labs" />
+          <GridCards rowData={newsItems} />
+        </>
+      );
     default:
       <></>;
   }

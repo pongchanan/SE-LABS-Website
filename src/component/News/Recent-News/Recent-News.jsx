@@ -4,7 +4,7 @@ import NewsCard from "../../Cards/News-Card";
 import previous from "../../../resource/previous-button.svg";
 import next from "../../../resource/next-button.svg";
 
-function RecentNews({ newsItems }) {
+function RecentNews({ rowData }) {
   return (
     <section className="flex overflow-hidden flex-col px-16 py-28 w-full bg-sky-100 max-md:px-5 max-md:py-24 max-md:max-w-full">
       <div className="flex flex-wrap gap-10 justify-between items-end w-full max-md:max-w-full">
@@ -25,7 +25,7 @@ function RecentNews({ newsItems }) {
       <div className="flex flex-col mt-16 w-full max-md:mt-10 max-md:max-w-full">
         <div className="box-border flex relative flex-col shrink-0">
           <div className="flex gap-8 items-start w-full max-md:max-w-full">
-            {newsItems.map((item, index) => (
+            {rowData.map((item, index) => (
               <NewsCard key={index} {...item} />
             ))}
           </div>
