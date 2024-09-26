@@ -16,11 +16,11 @@ function MainPages() {
     case "/":
       return (
         <>
+          <Modals />
           <HeroBox />
           <DividingRows />
           <RecentNews rowData={newsItems} />
           <RecentEvents listData={eventItems} />
-          <Modals />
         </>
       );
     case "/about":

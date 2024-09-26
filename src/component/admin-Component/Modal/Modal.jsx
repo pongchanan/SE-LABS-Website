@@ -5,7 +5,10 @@ import Modal from "./Modal-Frame";
 import NewsletterSubscription from "./example-input";
 import ImageUploader from "./input/Add-Img";
 import DropDown from "./relate/dropdown";
-
+import InputLong from "./input/Input-Long";
+import "./scrollbar.css";
+import CloseButton from "./Close-Btn";
+import OkBtn from "./OK-btn";
 const Modals = () => {
   const dispatch = useDispatch();
   // const isCreating = useSelector((state) => state.editAction.isCreate);
@@ -22,9 +25,16 @@ const Modals = () => {
         <button onClick={() => dispatch(editAction.closeModal())}>
           Open Again
         </button>
-        <NewsletterSubscription />
+        {/* <NewsletterSubscription /> */}
+        <CloseButton />
         <ImageUploader />
-        <DropDown />
+        <div className="flex space-x-4">
+          <DropDown />
+          <DropDown />
+        </div>
+        <InputLong />
+        <InputLong />
+        <OkBtn />
       </Modal>
     </div>
   );
