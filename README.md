@@ -9,31 +9,15 @@ todos
   -add animations/style
 -
 
-In the project directory, you can run:
+TODO
 
-### `npm start`
+- w(<630) , will become button to show nav
+  -table of content has to be able to be on screen even when scroll down
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+after mutate use invalidateQueries to remove cache
 
 User:
 About
-
 latest news - get >> user/news/thumbnail?amount=4 ,[2] - get >> user/news/image?news-id=123
 latest events - get >> user/event/thumbnail?amount=4,[2] - get >> user/event/image?event-id=123
 
@@ -102,11 +86,43 @@ Specific News
 
 - [cached]get >> user/news/thumbnail?news-id=123 -[cached]get >> user/news/image-high?news-id=123 - -get >> user/news/related-news?news-id=123
 
-- Admin/Researchers -login -Landing -Preview
+- Admin/Researchers
+  -login
+  -Landing
+  -Preview
 
-TODO
+ADMIN:
+-admin / researcher / lead-researcher
+-edit page
+-tables view
+-users view
+-a specific page for each editable object
+-preview before commit/request edit (modal with before and after, and another preview page of the content)
+-admin / lead has commit permissions
 
-- w(<630) , will become button to show nav
-  -table of content has to be able to be on screen even when scroll down
+commit tables -
 
-after mutate use invalidateQueries to remove cache
+MODALS EDITS:
+{title will be a link to a new tab of the links specific path ex. lab title -> /labs/${id}}
+
+-news
+img,header,body,author
+-research
+img,header,body(sections, conclusion),author
+-events
+img,header,body(sections, conclusion),author,dateStart,dateEnd
+-people (edit roles/gmail/details , add&del accounts)
+admin/lead -> edit roles/gmail/details of lower heirarchy, add&del accounts
+
+-publications
+edit link to paper
+-lab
+title,img,body,
+
+MODAL COMMIT:
+-commits
+(on landing will show [sender (under sender is role) || point of commit(edit/create) || short description || time])
+
+Create || Type of Commit [Author(role)]
+full description
+rejected

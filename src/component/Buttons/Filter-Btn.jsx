@@ -1,5 +1,5 @@
 import React from "react";
-import dropdown from "../resource/drop-down-filter.svg";
+import dropdown from "../../resource/drop-down-filter.svg";
 function FilterButton() {
   return (
     <button className="flex gap-2 justify-center items-center self-stretch px-4 py-2 my-auto bg-white border border-black border-solid rounded-[34px]">

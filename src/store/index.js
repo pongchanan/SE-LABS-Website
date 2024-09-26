@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import mainSlice from "./main-slice";
+// import mainSlice from "./main-slice";
+import editSlice from "./edit-slice";
 const store = configureStore({
-  reducer: { main: mainSlice.reducer },
+  // main: mainSlice.reducer
+  reducer: { edit: editSlice.reducer },
 });
 
 export default store;

@@ -2,8 +2,8 @@ import React from "react";
 import NewsCard from "../Cards/News-Card.jsx";
 import previous from "../../resource/previous-button.svg";
 import next from "../../resource/next-button.svg";
-import ViewAllButton from "../View-All-Btn.jsx";
-import FilterButton from "../Filter-Btn.jsx";
+import ViewAllButton from "../Buttons/View-All-Btn.jsx";
+import FilterButton from "../Buttons/Filter-Btn.jsx";
 
 let revisedData = [];
 let executed = false;

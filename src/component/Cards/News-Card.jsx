@@ -1,14 +1,21 @@
 import React from "react";
 import "./Card.css";
+
 const NewsCard = ({ image, title, content, author, date }) => {
   return (
     <article className="flex flex-col rounded-3xl border border-black border-solid min-w-[240px] w-[325px]">
-      <img
-        loading="lazy"
-        src={image}
-        alt={title}
-        className=" w-full rounded-tl-3xl rounded-tr-3xl aspect-[1.3]"
-      />
+      <div className="relative">
+        <img
+          loading="lazy"
+          src={image}
+          alt={title}
+          className="w-full rounded-tl-3xl rounded-tr-3xl aspect-[1.3]"
+        />
+        {/* Edit button overlay */}
+        <button className="absolute top-2 right-2 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">
+          Edit
+        </button>
+      </div>
       <div className="flex flex-col p-6 w-full bg-cyan-200 rounded-bl-3xl rounded-br-3xl border border-black border-solid max-md:px-5">
         <div className="flex flex-col w-full text-black">
           <h3 className="text-2xl font-bold leading-snug line-clamp-2 indent-clamp">

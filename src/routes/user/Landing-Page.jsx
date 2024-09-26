@@ -9,6 +9,7 @@ import { eventItems, labData, newsItems } from "../../PlaceHolder-Data/data";
 import TopicHeaderText from "../../component/Topic-Header";
 import GridCards from "../../component/Grid/Card-Grid";
 import DividingRows from "../../component/admin-Component/tables/proto1/table";
+import Modals from "../../component/admin-Component/Modal/Modal";
 function MainPages() {
   const location = useLocation();
   switch (location.pathname) {
@@ -19,6 +20,7 @@ function MainPages() {
           <DividingRows />
           <RecentNews rowData={newsItems} />
           <RecentEvents listData={eventItems} />
+          <Modals />
         </>
       );
     case "/about":
