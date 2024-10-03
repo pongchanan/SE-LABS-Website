@@ -4,13 +4,32 @@ const mainSlice = createSlice({
   initialState: {
     items: [],
     currentPath: null,
-    admin: false,
+    admin: true,
     researcher: false,
     leadResearcher: false,
-    itemQuantity:null,
+    itemQuantity: null,
+    token: null,
   },
-  reducers: {},
+  reducers: {
+    isAdmin: (state) => {
+      state.admin = true;
+      state.researcher = false;
+      state.leadResearcher = false;
+    },
+    isLead: (state) => {
+      state.admin = false;
+      state.researcher = false;
+      state.leadResearcher = true;
+    },
+    isResearcher: (state) => {
+      state.admin = false;
+      state.researcher = true;
+      state.leadResearcher = false;
+    },
+  },
 });
+export const mainAction = mainSlice.actions;
+
 export default mainSlice;
 
 //filter? bool (require filter in page or not)

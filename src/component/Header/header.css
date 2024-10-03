@@ -1,0 +1,6 @@
+.sticky-header {
+  position: sticky;
+  top: 0; /* Stick the header to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+}

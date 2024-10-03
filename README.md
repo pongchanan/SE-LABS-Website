@@ -15,6 +15,19 @@ TODO
   -table of content has to be able to be on screen even when scroll down
 
 after mutate use invalidateQueries to remove cache
+-create a validation method for emails when creating/editing emails in form modals
+-need to change context state from isAdmin=bool to role=[]
+
+DONE/TODO
+DONE - create elementary modal
+TODO - finish modal creation
+TODO - create tables
+tables - [n]every type,[n]commits,
+[1]TODO - fetching
+fetching [n]user normal pages, [n]user dynamic pages,[n]admin pages
+TODO - create a button on topright that has all the temporarily saved data from creating/editing
+it should have arr[] of objects(+type parameter), and will dropdown when hover it shows ?name and type, will open modal when clicked. stored in edit-slice
+TODO -
 
 User:
 About

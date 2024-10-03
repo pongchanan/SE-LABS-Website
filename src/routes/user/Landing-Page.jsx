@@ -10,6 +10,7 @@ import TopicHeaderText from "../../component/Topic-Header";
 import GridCards from "../../component/Grid/Card-Grid";
 import DividingRows from "../../component/admin-Component/tables/proto1/table";
 import Modals from "../../component/admin-Component/Modal/Modal";
+import TableComponent from "../../component/admin-Component/tables/proto2/table-try";
 function MainPages() {
   const location = useLocation();
   switch (location.pathname) {
@@ -17,6 +18,7 @@ function MainPages() {
       return (
         <>
           <Modals />
+          <TableComponent />
           <HeroBox />
           <DividingRows />
           <RecentNews rowData={newsItems} />

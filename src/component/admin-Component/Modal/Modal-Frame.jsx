@@ -8,7 +8,7 @@ export default function Modal({ children, className = "" }) {
 
   // Use selector to access modal state from the Redux store
   const isOpen = useSelector((state) => {
-    console.log("Redux state:", state);
+    // console.log("Redux state:", state);
     return state.edit.isOpen;
   });
 
