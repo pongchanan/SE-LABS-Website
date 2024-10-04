@@ -1,0 +1,17 @@
+RecentNews Component
+-recent RecentNews
+-member/people in research/lab pages
+-researches in lab page
+-related News
+-publicaiton in lab pages
+
+RecentEvents Component
+-RecentEvents
+
+Grid Component
+-publications
+-lab
+-News
+-researches
+-people
+-

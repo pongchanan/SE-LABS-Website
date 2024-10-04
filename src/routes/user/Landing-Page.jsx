@@ -21,8 +21,9 @@ function MainPages() {
           <TableComponent />
           <HeroBox />
           <DividingRows />
-          <RecentNews rowData={newsItems} />
-          <RecentEvents listData={eventItems} />
+
+          <RecentNews rowData={newsItems} topic="news" />
+          <RecentEvents listData={eventItems} topic="events" />
         </>
       );
     case "/about":
@@ -30,8 +31,8 @@ function MainPages() {
         <>
           <TopicAndImage />
           <AboutDescription />
-          <RecentNews rowData={newsItems} />
-          <RecentEvents listData={eventItems} />
+          <RecentNews rowData={newsItems} topic="news" />
+          <RecentEvents listData={eventItems} topic="events" />
         </>
       );
     case "/events":

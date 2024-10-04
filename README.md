@@ -18,6 +18,9 @@ after mutate use invalidateQueries to remove cache
 -create a validation method for emails when creating/editing emails in form modals
 -need to change context state from isAdmin=bool to role=[]
 
+////////////////////////////////
+[useQueries for parallel fetching]
+////////////////////////////////////////////////////////////////
 DONE/TODO
 DONE - create elementary modal
 TODO - finish modal creation

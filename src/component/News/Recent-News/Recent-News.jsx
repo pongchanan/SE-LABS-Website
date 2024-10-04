@@ -3,8 +3,7 @@ import NewsCard from "../../Cards/News-Card";
 
 import previous from "../../../resource/previous-button.svg";
 import next from "../../../resource/next-button.svg";
-
-function RecentNews({ rowData }) {
+function RecentNews({ rowData, topic = "news" }) {
   return (
     <section className="flex overflow-hidden flex-col px-16 py-28 w-full bg-sky-100 max-md:px-5 max-md:py-24 max-md:max-w-full">
       <div className="flex flex-wrap gap-10 justify-between items-end w-full max-md:max-w-full">
