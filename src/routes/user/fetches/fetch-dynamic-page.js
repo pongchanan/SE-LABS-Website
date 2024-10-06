@@ -5,7 +5,8 @@ import {
   useQuery,
   useQueries,
 } from "@tanstack/react-query";
-import { getData } from "../../../api/api-method";
+import { useParallelData } from "../../../api/custom-hooks";
+import { useEffect } from "react";
 // const fetchUrl = async (url) => {
 //   const response = await fetch(url);
 //   if (!response.ok) {
@@ -13,60 +14,49 @@ import { getData } from "../../../api/api-method";
 //   }
 //   return response.json();
 // };
-async function parallelData(urlArr) {
-  //map [{url,id},{}] to {id:{data},id:{data}}
-  //using getData each of the obejects in array
-  //and using useQueries
-}
+
 export const DataFetcherQueue = (template) => {
-  const [fetchQueue, setFetchQueue] = useState([
-    //[{url,id},{}]
-    "https://jsonplaceholder.typicode.com/posts/1",
-    "https://jsonplaceholder.typicode.com/posts/2",
-    "https://jsonplaceholder.typicode.com/posts/3",
-  ]);
-  const [fetchedData, setFetchedData] = useState([]);
+  // Queue with groups of URLs to fetch
+  const fetchQueue = [
+    //template here
+    ["https://jsonplaceholder.typicode.com/posts/1"],
+    ["https://jsonplaceholder.typicode.com/posts/2"],
+    ["https://jsonplaceholder.typicode.com/posts/3"],
+  ];
+  const [fetchedData, setFetchedData] = useState({}); // Store fetched data
+  const [isLoading, setIsLoading] = useState(true); // Track loading status
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
 
-  const mutation = useMutation(parallelData, {
-    onSuccess: (data) => {
-      setFetchedData((prevData) => [...prevData, data]);
-      // Remove the first item from the queue
-      setFetchQueue((prevQueue) => prevQueue.slice(1));
-    },
-    onError: (error) => {
-      console.error("Error fetching data:", error);
-    },
-    onSettled: () => {
-      // Automatically fetch the next item in the queue if there are more
-      if (fetchQueue.length > 0) {
-        mutation.mutate(fetchQueue[0]);
-      }
-    },
-  });
+  // Get the current group of URLs to fetch
+  const currentGroup = fetchQueue[currentGroupIndex];
 
-  const startFetching = () => {
-    if (fetchQueue.length > 0) {
-      mutation.mutate(fetchQueue[0]); // Start fetching the first item
-    }
-  };
+  // Use queries for the current group
+  const results = useParallelData(fetchQueue[currentGroup]);
 
-  return (
-    <div>
-      <h1>Data Fetcher Queue</h1>
-      <button
-        onClick={startFetching}
-        disabled={mutation.isLoading || fetchQueue.length === 0}
-      >
-        Start Fetching
-      </button>
-      {mutation.isLoading && <p>Loading...</p>}
-      {mutation.isError && <p>Error: {mutation.error.message}</p>}
-      <div>
-        <h2>Fetched Data</h2>
-        <pre>{JSON.stringify(fetchedData, null, 2)}</pre>
-      </div>
-    </div>
+  // Check if all queries in the current group are successful
+  const allQueriesDone = results.every(
+    (result) => result.isSuccess || result.isError
   );
+  // const anyLoading = results.some((result) => result.isLoading);
+
+  React.useEffect(() => {
+    if (allQueriesDone && currentGroupIndex < fetchQueue.length - 1) {
+      setFetchedData((prevData) => {
+        const newData = results.reduce((acc, result) => {
+          acc[result.id] = result; // Assuming 'id' is a unique identifier in each result
+          return acc;
+        }, {});
+
+        return { ...prevData, ...newData }; // Merge new data with previous data
+      });
+      setCurrentGroupIndex((prev) => prev + 1); // Move to the next group
+    } else if (allQueriesDone && currentGroupIndex === fetchQueue.length - 1) {
+      // If it's the last group, update the loading state
+      setIsLoading(false);
+    }
+  }, [allQueriesDone, currentGroupIndex, fetchQueue.length, results]);
+
+  return { fetchedData, isLoading };
 };
 
 //////////////////check if all queries are done (parallel queries)
