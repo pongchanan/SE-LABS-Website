@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+    backend:
+        build:
+            context: .
+            dockerfile: app/Dockerfile.backend
+        ports:
+            - '8000:8000'
+        depends_on:
+            - db
+        environment:
+            - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
+        volumes:
+            - ./app:/app
+        networks:
+            - app-network
+
+    frontend:
+        build:
+            context: .
+            dockerfile: Dockerfile.frontend
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./:/app # Mount the entire project root since frontend files are there
+            - /app/node_modules # Preserve node_modules in container
+        networks:
+            - app-network
+
+    db:
+        image: postgres:13
+        ports:
+            - '5433:5432'
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=postgres
+        volumes:
+            - db_data:/var/lib/postgresql/data
+            - ./app/db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
+        networks:
+            - app-network
+
+volumes:
+    db_data:
+
+networks:
+    app-network:
+        driver: bridge

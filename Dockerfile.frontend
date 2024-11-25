@@ -1,0 +1,16 @@
+FROM node:14
+
+WORKDIR /app
+
+# Copy package files from root
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy all frontend-related files
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
