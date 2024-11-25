@@ -1,0 +1,30 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    postgresql-client \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements from app directory
+COPY ./requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the backend code from app directory
+COPY ./ .
+
+# Define environment variable
+ENV URL_DATABASE=postgresql://postgres:postgres@db:5432/postgres
+ENV ACCESS_TOKEN_EXPIRE_MINUTES=30
+ENV ALGORITHM=HS256
+ENV SECRET_KEY=kjbfkjbnlrunos8g4p30ng303nri
+
+EXPOSE 8000
+
+# Correct command for running FastAPI with uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

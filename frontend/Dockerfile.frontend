@@ -1,0 +1,19 @@
+FROM node:16
+
+WORKDIR /app
+
+# Copy package files from root
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy all frontend-related files
+COPY . .
+
+# Define environment variable
+ENV REACT_APP_BACKEND_URL=http://localhost:8000
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

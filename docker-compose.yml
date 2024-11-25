@@ -3,8 +3,8 @@ version: '3.8'
 services:
     backend:
         build:
-            context: .
-            dockerfile: app/Dockerfile.backend
+            context: ./backend
+            dockerfile: Dockerfile.backend
         ports:
             - '8000:8000'
         depends_on:
@@ -12,19 +12,19 @@ services:
         environment:
             - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
         volumes:
-            - ./app:/app
+            - ./backend:/app
         networks:
             - app-network
 
     frontend:
         build:
-            context: .
+            context: ./frontend
             dockerfile: Dockerfile.frontend
         ports:
             - '3000:3000'
         volumes:
-            - ./:/app # Mount the entire project root since frontend files are there
-            - /app/node_modules # Preserve node_modules in container
+            - ./frontend:/app
+            - /app/node_modules
         networks:
             - app-network
 
