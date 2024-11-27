@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/frontend/node_modules
 /.pnp
 .pnp.js
 
@@ -29,6 +30,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+backend/venv
 .env
 
 # IDE-specific files

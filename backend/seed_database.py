@@ -12,9 +12,9 @@ import io
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from backend.database import Base, engine
-from backend.model import *
-from backend.schemas.ult.position import Position
+from database import Base, engine
+from model import *
+from schemas.ult.position import Position
 
 load_dotenv()
 
